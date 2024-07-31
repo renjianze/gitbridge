@@ -1,0 +1,25 @@
+ninja_required_version = 1.5
+GCC = "C:\Program Files (x86)\TOSUN\TSMaster\Data\compilers\llvm_mingw_x64\bin\clang++.exe"
+lflags = -shared -L "C:\Program Files (x86)\TOSUN\TSMaster\Data\compilers\llvm_mingw_x64\bin/../x86_64-w64-mingw32/lib" -Wl,"C:\Users\renjianze\Desktop\新建文件夹 (2)\Test123\MiniProgram\Build\CCode8471\mp.def"
+cflags = -target x86_64-pc-windows-gnu -stdlib=libc++ -fdeclspec -Werror=return-type -O0 -isystem "C:\Program Files (x86)\TOSUN\TSMaster\Data\compilers\llvm_mingw_x64\bin/../include/c++/v1" -I"C:\Users\renjianze\Desktop\新建文件夹 (2)\Test123\MiniProgram\Build\CCode8471" -I"C:\Users\renjianze\Desktop\新建文件夹 (2)\Test123\libs\CCode8471" -I"C:\Users\renjianze\Desktop\新建文件夹 (2)\Test123\libs\common" -I"C:\Users\renjianze\Desktop\新建文件夹 (2)\Test123\TestSystem\libs\common" 
+builddir = C:\Users\renjianze\Desktop\新建文件夹 (2)\Test123\MiniProgram\Build\CCode8471
+MPdir = C:\Users\renjianze\Desktop\新建文件夹 (2)\Test123\bin
+rule compile_jfz
+    command = $GCC -c $cflags -MD -MF $out.d $in -o $out
+    description =  
+    depfile = $out.d
+    deps = gcc
+cppstrdir0 = C:\Users\renjianze\Desktop\新建文件夹 (2)\Test123\MiniProgram\Build\CCode8471
+build $cppstrdir0\\CCode8471.o : compile_jfz $cppstrdir0\\CCode8471.cpp
+build $cppstrdir0\\CCode8471Extern.o : compile_jfz $cppstrdir0\\CCode8471Extern.cpp
+build $cppstrdir0\\Database.o : compile_jfz $cppstrdir0\\Database.cpp
+build $cppstrdir0\\TSMasterBaseSource.o : compile_jfz $cppstrdir0\\TSMasterBaseSource.cpp
+build $cppstrdir0\\TSMasterCustomAPIDoc.o : compile_jfz $cppstrdir0\\TSMasterCustomAPIDoc.cpp
+rule link_jfz
+  command = $GCC $DEFINES $INCLUDES $lflags $in -o $out
+build $MPdir\CCode8471.mp64 : link_jfz $cppstrdir0\\CCode8471.o $cppstrdir0\\CCode8471Extern.o $cppstrdir0\\Database.o $cppstrdir0\\TSMasterBaseSource.o $cppstrdir0\\TSMasterCustomAPIDoc.o 
+build all: phony $MPdir\CCode8471.mp64
+default all
+rule clean
+  command = cmd /c del /f /q $cppstrdir0\\CCode8471.o $cppstrdir0\\CCode8471Extern.o $cppstrdir0\\Database.o $cppstrdir0\\TSMasterBaseSource.o $cppstrdir0\\TSMasterCustomAPIDoc.o  $builddir\CCode8471.mp64
+build clean: clean

@@ -1,0 +1,17 @@
+# ninja log v5
+11	196	7439513092582131	C:/Users/renjianze/Desktop/新建文件夹 (2)/Test123/MiniProgram/Build/CCode8471/TSMasterBaseSource.o	5f185bb47bd8fad1
+14	208	7439513092724756	C:/Users/renjianze/Desktop/新建文件夹 (2)/Test123/MiniProgram/Build/CCode8471/TSMasterCustomAPIDoc.o	fbc151d8ffc21cd4
+9	217	7439513092815559	C:/Users/renjianze/Desktop/新建文件夹 (2)/Test123/MiniProgram/Build/CCode8471/Database.o	2d9025107c066f65
+7	799	7439513098614063	C:/Users/renjianze/Desktop/新建文件夹 (2)/Test123/MiniProgram/Build/CCode8471/CCode8471Extern.o	a8061264b9c44dc5
+9	178	7439515520304469	C:/Users/renjianze/Desktop/新建文件夹 (2)/Test123/MiniProgram/Build/CCode8471/CCode8471.o	f19b18217131a0d4
+180	236	7439515520862044	C:/Users/renjianze/Desktop/新建文件夹 (2)/Test123/bin/CCode8471.mp64	a2d42b8a775743a0
+17	200	7439517296525363	C:/Users/renjianze/Desktop/新建文件夹 (2)/Test123/MiniProgram/Build/CCode8471/CCode8471.o	f19b18217131a0d4
+20	792	7439517302441648	C:/Users/renjianze/Desktop/新建文件夹 (2)/Test123/MiniProgram/Build/CCode8471/CCode8471Extern.o	a8061264b9c44dc5
+792	844	7439517302974745	C:/Users/renjianze/Desktop/新建文件夹 (2)/Test123/bin/CCode8471.mp64	a2d42b8a775743a0
+18	200	7439519615159090	C:/Users/renjianze/Desktop/新建文件夹 (2)/Test123/MiniProgram/Build/CCode8471/CCode8471.o	f19b18217131a0d4
+201	257	7439519615718438	C:/Users/renjianze/Desktop/新建文件夹 (2)/Test123/bin/CCode8471.mp64	a2d42b8a775743a0
+7	185	7439544383040338	C:/Users/renjianze/Desktop/新建文件夹 (2)/Test123/MiniProgram/Build/CCode8471/CCode8471.o	f19b18217131a0d4
+10	779	7439544388942313	C:/Users/renjianze/Desktop/新建文件夹 (2)/Test123/MiniProgram/Build/CCode8471/CCode8471Extern.o	a8061264b9c44dc5
+779	834	7439544389510659	C:/Users/renjianze/Desktop/新建文件夹 (2)/Test123/bin/CCode8471.mp64	a2d42b8a775743a0
+16	184	7439544848758137	C:/Users/renjianze/Desktop/新建文件夹 (2)/Test123/MiniProgram/Build/CCode8471/CCode8471.o	f19b18217131a0d4
+185	235	7439544849256323	C:/Users/renjianze/Desktop/新建文件夹 (2)/Test123/bin/CCode8471.mp64	a2d42b8a775743a0

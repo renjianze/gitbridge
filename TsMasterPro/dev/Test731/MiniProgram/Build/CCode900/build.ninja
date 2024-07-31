@@ -1,0 +1,25 @@
+ninja_required_version = 1.5
+GCC = "C:\Program Files (x86)\TOSUN\TSMaster\Data\compilers\llvm_mingw_x64\bin\clang++.exe"
+lflags = -shared -L "C:\Program Files (x86)\TOSUN\TSMaster\Data\compilers\llvm_mingw_x64\bin/../x86_64-w64-mingw32/lib" -Wl,"E:\均胜电子\Work_ProjectEngnering\TsmasterCan\Test731\MiniProgram\Build\CCode900\mp.def"
+cflags = -target x86_64-pc-windows-gnu -stdlib=libc++ -fdeclspec -Werror=return-type -O0 -isystem "C:\Program Files (x86)\TOSUN\TSMaster\Data\compilers\llvm_mingw_x64\bin/../include/c++/v1" -I"E:\均胜电子\Work_ProjectEngnering\TsmasterCan\Test731\MiniProgram\Build\CCode900" -I"E:\均胜电子\Work_ProjectEngnering\TsmasterCan\Test731\libs\CCode900" -I"E:\均胜电子\Work_ProjectEngnering\TsmasterCan\Test731\libs\common" -I"E:\均胜电子\Work_ProjectEngnering\TsmasterCan\Test731\TestSystem\libs\common" 
+builddir = E:\均胜电子\Work_ProjectEngnering\TsmasterCan\Test731\MiniProgram\Build\CCode900
+MPdir = E:\均胜电子\Work_ProjectEngnering\TsmasterCan\Test731\bin
+rule compile_jfz
+    command = $GCC -c $cflags -MD -MF $out.d $in -o $out
+    description =  
+    depfile = $out.d
+    deps = gcc
+cppstrdir0 = E:\均胜电子\Work_ProjectEngnering\TsmasterCan\Test731\MiniProgram\Build\CCode900
+build $cppstrdir0\\CCode900.o : compile_jfz $cppstrdir0\\CCode900.cpp
+build $cppstrdir0\\CCode900Extern.o : compile_jfz $cppstrdir0\\CCode900Extern.cpp
+build $cppstrdir0\\Database.o : compile_jfz $cppstrdir0\\Database.cpp
+build $cppstrdir0\\TSMasterBaseSource.o : compile_jfz $cppstrdir0\\TSMasterBaseSource.cpp
+build $cppstrdir0\\TSMasterCustomAPIDoc.o : compile_jfz $cppstrdir0\\TSMasterCustomAPIDoc.cpp
+rule link_jfz
+  command = $GCC $DEFINES $INCLUDES $lflags $in -o $out
+build $MPdir\CCode900.mp64 : link_jfz $cppstrdir0\\CCode900.o $cppstrdir0\\CCode900Extern.o $cppstrdir0\\Database.o $cppstrdir0\\TSMasterBaseSource.o $cppstrdir0\\TSMasterCustomAPIDoc.o 
+build all: phony $MPdir\CCode900.mp64
+default all
+rule clean
+  command = cmd /c del /f /q $cppstrdir0\\CCode900.o $cppstrdir0\\CCode900Extern.o $cppstrdir0\\Database.o $cppstrdir0\\TSMasterBaseSource.o $cppstrdir0\\TSMasterCustomAPIDoc.o  $builddir\CCode900.mp64
+build clean: clean
