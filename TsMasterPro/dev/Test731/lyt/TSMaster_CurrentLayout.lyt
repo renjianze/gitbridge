@@ -32,6 +32,42 @@ AppName=TSMaster
 [OnlineReplay]
 CANCount=0
 
+[Pg0]
+Count=0
+f0=TfrmCANFDTrace,0,838,292,2820,1316,304,148,2716,941,1
+f1=TfrmPanel,0,640,63,3880,1611,0,0,1900,878,1
+f2=TfrmCANRBS,0,690,248,2660,1337,160,79,2048,1382,1
+HiddenCount=11
+f3=TfrmCCodeEditor,0,758,63,2852,1436,520,468,2080,1265,1
+f4=TfrmCCodeEditor,1,121,54,1640,851,260,260,1040,703,1
+h0=TfrmCANRBS,0,351,43,2660,1337,160,79,2048,1382,1
+f5=TfrmCCodeEditor,0,236,291,1040,705,55,66,1427,846,1
+f6=TfrmCCodeEditor,0,362,137,1040,705,55,66,1427,846,1
+h1=TfrmCCodeEditor,0,331,59,2852,1602,520,468,2080,1265,1
+h2=TfrmCANFDTrace,0,-36,205,2820,1316,304,148,2716,941,1
+h3=TfrmCANDatabase,0,1042,398,1920,997,320,239,1902,1069,1
+h4=TfrmCCodeEditor,1,0,569,1920,569,520,468,2080,1265,1
+h5=TfrmCANFDTransmit,0,420,610,1552,832,750,113,2216,1094,1
+h6=TfrmPanel,0,-539,275,3880,1611,0,0,1900,878,1
+h7=TfrmGraphics,0,843,123,2331,849,314,356,1872,832,1
+h8=TfrmSystemVarMgmt,0,624,385,2284,1345,624,562,1604,1345,1
+h9=TfrmSystemMsgs,0,0,0,2588,590,2026,92,1706,1730,1
+h10=TfrmPanel,1,-212,650,3010,1332,0,0,1900,878,1
+
+[Pg1]
+Count=7
+f0=TfrmSystemMsgs,0,1482,499,1530,621,2026,92,1706,1730,1
+f1=TfrmCANDatabase,0,480,553,1482,1120,320,239,1902,1069,1
+f2=TfrmCANStatistics,0,1482,0,1530,499,282,475,698,567,1
+HiddenCount=3
+f3=TfrmCANFDTransmit,0,1568,180,2114,1013,750,113,2216,1094,1
+f4=TfrmCANFDTrace,0,390,401,2996,1105,304,148,2716,941,1
+f5=TfrmCCodeEditor,0,250,180,2664,1460,110,119,2854,1523,1
+f6=TfrmPanel,0,122,0,3546,1996,0,0,520,1332,1
+h0=TfrmCANRBS,0,260,407,2262,1019,160,79,2048,1382,1
+h1=TfrmCANFDTrace,0,470,499,2996,1039,304,148,2716,941,1
+h2=TfrmPanel,1,514,180,3066,1901,0,0,520,1332,1
+
 [MeasurementController]
 MCount=13
 M0=0,1,131,-1,0,TfrmSystemMsgs,系统消息
@@ -43,7 +79,7 @@ M5=0,1,128,-1,5,TfrmCANStatistics,CAN统计数据
 M6=-1,1,155,-1,6,TfrmPanel,已删除: Panel
 M7=0,1,69,-1,7,TfrmCANRBS,CAN剩余总线仿真
 M8=-1,1,146,-1,8,TfrmCCodeEditor,已删除: CCodeEditor
-M9=0,1,146,-1,9,TfrmCCodeEditor,C 代码编辑器 [CCode900*]
+M9=0,1,146,-1,9,TfrmCCodeEditor,C 代码编辑器 [CCode900]
 M10=-1,1,146,-1,10,TfrmCCodeEditor,已删除: CCodeEditor
 M11=0,1,15,-1,11,TfrmSystemVarMgmt,系统变量管理器
 M12=0,1,155,-1,12,TfrmPanel,New
@@ -55,7 +91,7 @@ MDI=1
 CaptionRenamed=0
 IsExternal=0
 Caption=系统消息
-UICommon=0,-1,0,0,z7XNs8/7z6I_,100,205,8647201667585605229
+UICommon=0,-1,0,0,z7XNs8/7z6I_,100,215,8647201667585605229
 UIFilter=
 
 [CANFDTraceOptions]
@@ -139,7 +175,7 @@ CaptionRenamed=0
 IsExternal=0
 Caption=CAN 数据库
 HWChnCount=2
-UICommon=0,-1,0,0,Q0FOIMr9vt2/4g__,100,374,4469823396359714181
+UICommon=0,-1,0,0,Q0FOIMr9vt2/4g__,100,333,4469823396359714181
 UIFilter=
 PropertyHeight=298
 PropertyVisible=1
@@ -156,7 +192,7 @@ MDI=1
 CaptionRenamed=0
 IsExternal=0
 Caption=CAN统计数据
-UICommon=0,-1,0,0,Q0FOzbO8xsr9vt0_,100,106,7884404480705654136
+UICommon=0,-1,0,0,Q0FOzbO8xsr9vt0_,100,104,7884404480705654136
 UIFilter=
 
 [ChannelMappings]
@@ -170,211 +206,6 @@ AOChnCount=0
 DIChnCount=0
 DOChnCount=0
 GPSChnCount=0
-
-[Graphics]
-ColorBkgd=4294967295
-ColorXAxis=4278190080
-ColorGrid=869059788
-SgnCNT=0
-AbsoluteTimeStart=2021-08-02 15:46:29
-YAxesMode=0
-YRangeMode=0
-TimeSpanS=10
-MaxPoints=100000
-RealtimeComment=0
-XMode=0
-IsLeftCursorDrag=1
-AutoStart=0
-MDI=1
-CaptionRenamed=0
-IsExternal=0
-Caption=图形
-ActiveVis=1
-YVis=1
-ColVis=1
-NameVis=1
-ValVis=1
-TextOnly=0
-ValueFormat=0.00
-Enabled=1
-
-[app_conn_callback_before_connect]
-Channel Selection=200
-CAN RBS=100
-J1939 TP=400
-Measurement Controller=500
-MDI Manager=600
-Signal Server=300
-FlexRay RBS=100
-Graphics=100
-CAN / CAN FD 报文信息 1=100
-TSMaster Main Application=100
-CAN / CAN FD 报文信息 2=100
-FlexRay RBS Controller=100
-
-[app_conn_callback_after_connect]
-CAN RBS=300
-MP Library Manager=400
-LIN RBS=350
-Measurement Comment Manager=200
-J1939 TP=100
-MDI Manager=500
-FlexRay RBS=100
-Ribbon Manager=700
-Graphics=100
-TSMaster Main Application=100
-
-[app_conn_callback_before_disconnect]
-J1939 TP=300
-MDI Manager=500
-LIN RBS=100
-Signal Server=400
-
-[app_conn_callback_after_disconnect]
-CAN RBS=300
-Measurement Controller=800
-Bus Log Engine=400
-MDI Manager=200
-FlexRay RBS=100
-MP Library Manager=700
-Ribbon Manager=600
-Graphics=100
-CAN Transmit=100
-CAN / CAN FD 报文信息 1=100
-TSMaster Main Application=100
-CAN / CAN FD 报文信息 2=100
-
-[TsRPC]
-Actv=1
-SizeBytes=1048576
-
-[TsRPCIP]
-Enabled=0
-Port=2809
-Proto=0
-FileCnt=0
-
-[TTsSimManager]
-FullSim=0
-Speed=1
-Step=0.1
-
-[UserVariables]
-Count=4
-u0=CCode900.CAN7C1,,整型变量,CCode900.mp64,0,0,0,100,0,0x1,-1,,,0,-1,
-u1=CCode900.MCUVersion,,字符串变量,CCode900.mp64,9,0,0,100,MTY1,,-1,,,0,-1,MTY1
-u2=CCode900.DSPVersion,,字符串变量,CCode900.mp64,9,0,0,100,MDAyMDAwMA__,,-1,,,0,-1,MDAyMDAwMA__
-u3=CCode900.version,,字符串变量,CCode900.mp64,9,0,0,100,MTUzNDU3Mg__,,-1,,,-1,-1,MTUzNDU3Mg__
-u4=CCode900.Version,,,User,9,0,0,250,MA__,,-1,,,0,-1,
-
-[PluginManager]
-ExternalCount=0
-
-[BusStatistics]
-Enabled=1
-
-[app_hw_selector_conf]
-FActiveWirelessOBD=
-FEnableTSWirelessOBD=0
-DeviceCount=0
-
-[SoftwareConf]
-UICommon=0,0,0,0,z7XNs9DFz6I_,100,244,5971782017536333904
-UIFilter=
-
-[TfrmProjectSettings]
-UICommon=0,0,0,0,uaSzzMno1sM_,100,91,177338147129019872
-UIFilter=
-
-[hw_app_chn_0]
-TSVirtual_CAN_FilterEn=0
-TSVirtual_CAN_FilterStr=XXXXXXXXXXX
-PeakUSB_CAN_conf={"FControllerType":0,"FClockMHz":20,"FTSeg1Abr":2,"FTSeg2Abr":1,"FSjwAbr":1,"FPrescalerAbr":10,"FTSeg1Dbr":3,"FTSeg2Dbr":1,"FSjwDbr":1,"FPrescalerDbr":2,"FArbitrationBaudrateBps":500000,"FDataBaudrateBps":2000000,"FSamplingPointMul10Percent":750}
-
-[Hardware]
-UICommon=0,0,0,0,07K8/sXk1sM_,100,128,9173832441331490794
-UIFilter=
-
-[TS_MAPPING]
-UICommon=0,0,0,0,zazQx82otcDTs8nkseC8rcb3,100,193,7437140750708782440
-UIFilter=
-
-[MpGen]
-CAN_FAW_C001_PHEV_CANMatrix_1=1
-CAN_FAW_C001_PHEV_CANMatrix_1Alias=
-
-[CANRBS]
-UICommon=0,-1,0,0,Q0FOyqPT4Nfcz9+3wtXm,100,159,4603816760890094932
-UIFilter=
-ShowTopology=1
-TopoWidth=250
-IgnoreDisabled=1
-DisplayRxSignals=1
-GridWidth=250
-
-[MPLibraryMgmt]
-crc=
-MPsCount=2
-programmable_filter=
-CCode900=
-MPs0=programmable_filter.mp64
-MPs1=crc.mp64
-
-[TfrmMPFunctionList]
-scroll_1=3
-
-[AutomationScriptEditor]
-SearchFromCaret=0
-SearchBackwards=0
-SearchCaseSensitive=0
-SearchSelectionOnly=0
-SearchTextAtCaret=1
-SearchWholeWords=0
-SearchRegex=0
-RememberSearchList=0
-SearchDirectory=0
-SearchInSub=0
-SearchListMax=6
-
-[SysVarMgmt]
-UICommon=0,-1,0,0,z7XNs7Hkwb+53MDtxvc_,100,175,1618481903535457914
-UIFilter=
-
-[Pg0]
-Count=0
-f0=TfrmCANFDTrace,0,838,292,2820,1316,304,148,2716,941,1
-f1=TfrmPanel,0,640,63,3880,1611,0,0,1900,878,1
-f2=TfrmCANRBS,0,690,248,2660,1337,160,79,2048,1382,1
-HiddenCount=11
-f3=TfrmCCodeEditor,0,758,63,2852,1436,520,468,2080,1265,1
-f4=TfrmCCodeEditor,1,121,54,1640,851,260,260,1040,703,1
-h0=TfrmCANRBS,0,351,43,2660,1337,160,79,2048,1382,1
-f5=TfrmCCodeEditor,0,236,291,1040,705,55,66,1427,846,1
-f6=TfrmCCodeEditor,0,362,137,1040,705,55,66,1427,846,1
-h1=TfrmCCodeEditor,0,331,59,2852,1602,520,468,2080,1265,1
-h2=TfrmCANFDTrace,0,-36,205,2820,1316,304,148,2716,941,1
-h3=TfrmCANDatabase,0,1042,398,1920,997,320,239,1902,1069,1
-h4=TfrmCCodeEditor,1,0,569,1920,569,520,468,2080,1265,1
-h5=TfrmCANFDTransmit,0,420,610,1552,832,750,113,2216,1094,1
-h6=TfrmPanel,0,-539,275,3880,1611,0,0,1900,878,1
-h7=TfrmGraphics,0,843,123,2331,849,314,356,1872,832,1
-h8=TfrmSystemVarMgmt,0,624,385,2284,1345,624,562,1604,1345,1
-h9=TfrmSystemMsgs,0,0,0,2588,590,2026,92,1706,1730,1
-h10=TfrmPanel,1,-212,650,3010,1332,0,0,1900,878,1
-
-[Pg1]
-Count=7
-f0=TfrmSystemMsgs,0,1482,499,1530,621,2026,92,1706,1730,1
-f1=TfrmCANDatabase,0,480,553,1482,1120,320,239,1902,1069,1
-f2=TfrmCANStatistics,0,1482,0,1530,499,282,475,698,567,1
-HiddenCount=3
-f3=TfrmCANFDTransmit,0,1568,180,2114,1013,750,113,2216,1094,1
-f4=TfrmCANFDTrace,0,390,401,2996,1105,304,148,2716,941,1
-f5=TfrmCCodeEditor,0,250,180,2664,1460,110,119,2854,1523,1
-f6=TfrmPanel,0,122,0,3546,1996,0,0,520,1332,1
-h0=TfrmCANRBS,0,260,407,2262,1019,160,79,2048,1382,1
-h1=TfrmCANFDTrace,0,470,499,2996,1039,304,148,2716,941,1
-h2=TfrmPanel,1,514,180,3066,1901,0,0,520,1332,1
 
 [RTL_Form_Position]
 TfrmCANTrace_0=58,66,1007,568
@@ -551,3 +382,171 @@ PixelsPerInch=168
 AppLeftP=2
 AppTopP=57
 
+[Graphics]
+ColorBkgd=4294967295
+ColorXAxis=4278190080
+ColorGrid=869059788
+SgnCNT=0
+AbsoluteTimeStart=2021-08-02 15:46:29
+YAxesMode=0
+YRangeMode=0
+TimeSpanS=10
+MaxPoints=100000
+RealtimeComment=0
+XMode=0
+IsLeftCursorDrag=1
+AutoStart=0
+MDI=1
+CaptionRenamed=0
+IsExternal=0
+Caption=图形
+ActiveVis=1
+YVis=1
+ColVis=1
+NameVis=1
+ValVis=1
+TextOnly=0
+ValueFormat=0.00
+Enabled=1
+
+[app_conn_callback_before_connect]
+Channel Selection=200
+CAN RBS=100
+J1939 TP=400
+Measurement Controller=500
+MDI Manager=600
+Signal Server=300
+FlexRay RBS=100
+Graphics=100
+CAN / CAN FD 报文信息 1=100
+TSMaster Main Application=100
+CAN / CAN FD 报文信息 2=100
+FlexRay RBS Controller=100
+
+[app_conn_callback_after_connect]
+CAN RBS=300
+MP Library Manager=400
+LIN RBS=350
+Measurement Comment Manager=200
+J1939 TP=100
+MDI Manager=500
+FlexRay RBS=100
+Ribbon Manager=700
+Graphics=100
+TSMaster Main Application=100
+
+[app_conn_callback_before_disconnect]
+J1939 TP=300
+MDI Manager=500
+LIN RBS=100
+Signal Server=400
+
+[app_conn_callback_after_disconnect]
+CAN RBS=300
+Measurement Controller=800
+Bus Log Engine=400
+MDI Manager=200
+FlexRay RBS=100
+MP Library Manager=700
+Ribbon Manager=600
+Graphics=100
+CAN Transmit=100
+CAN / CAN FD 报文信息 1=100
+TSMaster Main Application=100
+CAN / CAN FD 报文信息 2=100
+
+[TsRPC]
+Actv=1
+SizeBytes=1048576
+
+[TsRPCIP]
+Enabled=0
+Port=2809
+Proto=0
+FileCnt=0
+
+[TTsSimManager]
+FullSim=0
+Speed=1
+Step=0.1
+
+[UserVariables]
+Count=4
+u0=CCode900.CAN7C1,,整型变量,CCode900.mp64,0,0,0,100,0,0x1,-1,,,0,-1,
+u1=CCode900.MCUVersion,,字符串变量,CCode900.mp64,9,0,0,100,MTY1,,-1,,,0,-1,MTY1
+u2=CCode900.DSPVersion,,字符串变量,CCode900.mp64,9,0,0,100,MDAyMDAwMA__,,-1,,,0,-1,MDAyMDAwMA__
+u3=CCode900.version,,字符串变量,CCode900.mp64,9,0,0,100,MTUzNDU3Mg__,,-1,,,-1,-1,MTUzNDU3Mg__
+u4=CCode900.Version,,,User,9,0,0,250,MA__,,-1,,,0,-1,
+
+[PluginManager]
+ExternalCount=0
+
+[BusStatistics]
+Enabled=1
+
+[app_hw_selector_conf]
+FActiveWirelessOBD=
+FEnableTSWirelessOBD=0
+DeviceCount=0
+
+[SoftwareConf]
+UICommon=0,0,0,0,z7XNs9DFz6I_,100,244,5971782017536333904
+UIFilter=
+
+[TfrmProjectSettings]
+UICommon=0,0,0,0,uaSzzMno1sM_,100,91,177338147129019872
+UIFilter=
+
+[hw_app_chn_0]
+TSVirtual_CAN_FilterEn=0
+TSVirtual_CAN_FilterStr=XXXXXXXXXXX
+PeakUSB_CAN_conf={"FControllerType":0,"FClockMHz":20,"FTSeg1Abr":2,"FTSeg2Abr":1,"FSjwAbr":1,"FPrescalerAbr":10,"FTSeg1Dbr":3,"FTSeg2Dbr":1,"FSjwDbr":1,"FPrescalerDbr":2,"FArbitrationBaudrateBps":500000,"FDataBaudrateBps":2000000,"FSamplingPointMul10Percent":750}
+
+[Hardware]
+UICommon=0,0,0,0,07K8/sXk1sM_,100,128,9173832441331490794
+UIFilter=
+
+[TS_MAPPING]
+UICommon=0,0,0,0,zazQx82otcDTs8nkseC8rcb3,100,193,7437140750708782440
+UIFilter=
+
+[MpGen]
+CAN_FAW_C001_PHEV_CANMatrix_1=1
+CAN_FAW_C001_PHEV_CANMatrix_1Alias=
+
+[CANRBS]
+UICommon=0,-1,0,0,Q0FOyqPT4Nfcz9+3wtXm,100,154,4603816760890094932
+UIFilter=
+ShowTopology=1
+TopoWidth=250
+IgnoreDisabled=1
+DisplayRxSignals=1
+GridWidth=250
+
+[MPLibraryMgmt]
+crc=
+MPsCount=2
+programmable_filter=
+CCode900=
+MPs0=programmable_filter.mp64
+MPs1=crc.mp64
+
+[TfrmMPFunctionList]
+scroll_1=3
+
+[AutomationScriptEditor]
+SearchFromCaret=0
+SearchBackwards=0
+SearchCaseSensitive=0
+SearchSelectionOnly=0
+SearchTextAtCaret=1
+SearchWholeWords=0
+SearchRegex=0
+RememberSearchList=0
+SearchDirectory=0
+SearchInSub=0
+SearchListMax=6
+
+[SysVarMgmt]
+UICommon=0,-1,0,0,z7XNs7Hkwb+53MDtxvc_,100,166,1618481903535457914
+UIFilter=
